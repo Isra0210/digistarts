@@ -1,7 +1,9 @@
-import 'package:digistarts/home/home.dart';
+import 'package:digistarts/app/app_binding.dart';
+import 'package:digistarts/app/modules/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  AppBinding().dependencies();
   runApp(MyApp());
 }
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.cyan,
       ),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: HomeView(),
     );
   }
 }

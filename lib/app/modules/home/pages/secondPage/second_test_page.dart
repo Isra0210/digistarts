@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SecondTestPage extends StatelessWidget {
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
