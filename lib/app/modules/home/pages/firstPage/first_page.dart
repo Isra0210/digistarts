@@ -8,7 +8,6 @@ class FirstPage extends GetView<FirstPageController> {
   @override
   Widget build(BuildContext context) {
     final _textController = TextEditingController();
-    final double maxWidth = MediaQuery.of(context).size.width;
 
     return Obx(
       () => Container(
@@ -129,7 +128,7 @@ class FirstPage extends GetView<FirstPageController> {
                     Padding(
                       padding: const EdgeInsets.only(right: 10.0),
                       child: Container(
-                        width: maxWidth * 0.4,
+                        width: Get.width * 0.4,
                         decoration: BoxDecoration(
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(20),
@@ -147,7 +146,7 @@ class FirstPage extends GetView<FirstPageController> {
                       ),
                     ),
                     Container(
-                      width: maxWidth * 0.4,
+                      width: Get.width * 0.4,
                       decoration: BoxDecoration(
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(20),
@@ -168,7 +167,7 @@ class FirstPage extends GetView<FirstPageController> {
                   ],
                 )
               : Container(
-                  width: maxWidth * 0.5,
+                  width: Get.width * 0.5,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(20),
