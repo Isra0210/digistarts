@@ -9,11 +9,18 @@ import 'widget/keyboard_widget.dart';
 class SecondPage extends GetView<SecondPageController> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        DisplayWidget(),
-        KeyboardWidget(),
-      ],
+    return Container(
+      color: Color.fromRGBO(48, 48, 48, 1),
+      child: ListView(
+        shrinkWrap: true,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: DisplayWidget(),
+          ),
+          KeyboardWidget(),
+        ],
+      ),
     );
   }
 }

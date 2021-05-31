@@ -2,7 +2,7 @@ import 'package:digistarts/app/modules/home/pages/firstPage/first_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import 'pages/secondPage/second_test_page.dart';
+import 'pages/secondPage/second_page.dart';
 
 class HomeView extends GetView {
   @override

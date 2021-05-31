@@ -7,76 +7,48 @@ import 'button_row_widget.dart';
 import 'button_widget.dart';
 
 class KeyboardWidget extends GetView<SecondPageController> {
-  final Color colorGreyDark = Color.fromRGBO(82, 82, 82, 1);
-  final Color colorGrey = Color.fromRGBO(112, 112, 112, 1);
+  final Color colorGreyDark = Color.fromRGBO(74, 74, 74, 1);
   final Color colorCyan = Colors.cyan[900]!;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height * 0.6,
+      height: Get.height * 0.4,
       child: Column(
         children: [
           ButtonRow([
             Button(
-              text: 'AC',
-              color: colorGreyDark,
-              onPressed: () => controller.clearConsole(),
-              big: false,
+              text: '/',
+              onPressed: () => controller.division(),
+              color: colorCyan,
             ),
             Button(
               text: '%',
-              onPressed: () => controller.calculate('%'),
+              onPressed: () => controller.rest(),
               color: colorGreyDark,
-              big: false,
             ),
             Button(
-              text: '=',
-              onPressed: () => controller.calculate('='),
+              text: 'AC',
               color: colorGreyDark,
-              big: false,
-            ),
-          ]),
-          SizedBox(height: 1),
-          ButtonRow([
-            Button(
-              text: '1',
-              onPressed: () => controller.addItem('1'),
-              color: colorGrey,
-              big: false,
-            ),
-            Button(
-              text: '0',
-              onPressed: () => controller.addItem('0'),
-              color: colorGrey,
-              big: false,
+              onPressed: () => controller.clearConsole(),
             ),
           ]),
           SizedBox(height: 1),
           ButtonRow([
             Button(
               text: '-',
-              onPressed: () => controller.calculate('-'),
+              onPressed: () => controller.subtract(),
               color: colorCyan,
-              big: false,
             ),
             Button(
               text: '+',
-              onPressed: () => controller.calculate('+'),
+              onPressed: () => controller.sum(),
               color: colorCyan,
-              big: false,
             ),
             Button(
               text: 'x',
-              onPressed: () => controller.calculate('x'),
+              onPressed: () => controller.multiplication(),
               color: colorCyan,
-              big: false,
-            ),
-            Button(
-              text: '/',
-              onPressed: () => controller.calculate('/'),
-              color: colorCyan,
-              big: false,
             ),
           ]),
         ],

@@ -67,8 +67,10 @@ class FirstPage extends GetView<FirstPageController> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             controller.numberList.length > 0
-                                ? Text('Digitações:',
-                                    style: TextStyle(fontSize: 18))
+                                ? Text(
+                                    'Digitações:',
+                                    style: TextStyle(fontSize: 18),
+                                  )
                                 : Container(),
                             Padding(
                               padding: controller.numberList.length > 0
@@ -77,13 +79,11 @@ class FirstPage extends GetView<FirstPageController> {
                               child: Container(
                                 constraints: BoxConstraints(maxHeight: 300),
                                 child: ListView.builder(
-                                  // physics: NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
                                   itemCount: controller.numberList.length,
                                   itemBuilder: (ctx, i) => Text(
                                     '${controller.numberList[i]}',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
@@ -107,8 +107,7 @@ class FirstPage extends GetView<FirstPageController> {
                               child: ListView.builder(
                                 physics: NeverScrollableScrollPhysics(),
                                 shrinkWrap: true,
-                                itemCount:
-                                    controller.noRepeatedNumberList.length,
+                                itemCount: controller.noRepeatedNumberList.length,
                                 itemBuilder: (ctx, i) => Text(
                                   '${controller.noRepeatedNumberList[i]}',
                                   style: TextStyle(fontWeight: FontWeight.bold),

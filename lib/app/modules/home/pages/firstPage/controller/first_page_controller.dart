@@ -8,8 +8,7 @@ class FirstPageController extends GetxController {
 
   RxList<int> _noRepeatedNumberList = RxList<int>();
   List<int> get noRepeatedNumberList => _noRepeatedNumberList;
-  set noRepeatedNumberList(List<int> noRepeatedNumberList) =>
-      _noRepeatedNumberList.value = noRepeatedNumberList;
+  set noRepeatedNumberList(List<int> noRepeatedNumberList) => _noRepeatedNumberList.value = noRepeatedNumberList;
 
   RxString _inputText = ''.obs;
   String get inputText => _inputText.value;
